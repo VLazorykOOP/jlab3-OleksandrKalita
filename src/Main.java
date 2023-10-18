@@ -1,7 +1,60 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(" Lab 3");
-	// write your code here
+        System.out.println("");
+
+        firstTask();
     }
+
+    public static void firstTask() {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Kadr> kadrs = new ArrayList<>();
+
+        while (true) {
+            System.out.println("Кого ви хочете створити:\n'1' - Звичайний робтник.\n'2' - Інженер\n'3' - Адміністратор");
+            Integer symbol = scanner.nextInt();
+            scanner.nextLine();
+
+            if (symbol == 1) {
+                System.out.print("Enter your name: ");
+                String name = scanner.nextLine();
+                System.out.print("Enter your birthdate: ");
+                String date = scanner.nextLine();
+
+                Robitnyk person = new Robitnyk(name, date);
+                kadrs.add(person);
+            } else if (symbol == 2) {
+                System.out.print("Enter your name: ");
+                String name = scanner.nextLine();
+                System.out.print("Enter your birthdate: ");
+                String date = scanner.nextLine();
+                System.out.print("Enter your education: ");
+                String education = scanner.nextLine();
+
+                Ingeneer person = new Ingeneer(name, date, education);
+                kadrs.add(person);
+            } else if (symbol == 3) {
+                System.out.print("Enter your name: ");
+                String name = scanner.nextLine();
+                System.out.print("Enter your birthdate: ");
+                String date = scanner.nextLine();
+                System.out.print("Enter your key: ");
+                Integer key = scanner.nextInt();
+
+                Administrator person = new Administrator(name, date, key);
+                kadrs.add(person);
+            } else if (symbol == 4) {
+                for (Kadr item : kadrs) {
+                    item.Show();
+                }
+            } else {
+                System.out.println("EXIT - ->");
+                break;
+            }
+        }
+    }
+    
 }

@@ -1,5 +1,5 @@
-public class Hyperbola extends Function {
-    @Override
+public class Hyperbola implements IFunction  {
+
     public double calculate(double x) {
         // fn = y = a / x
         double a = 2.0;
@@ -10,7 +10,7 @@ public class Hyperbola extends Function {
             return Double.NaN;
         }
     }
-    @Override
+    
     public void printResult(double x) {
         double result = calculate(x);
         System.out.println("Результат: " + result);

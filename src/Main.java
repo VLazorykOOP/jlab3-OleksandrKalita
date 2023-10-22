@@ -60,11 +60,11 @@ public class Main {
     public static void secondTask() {
         double x = 1;
 
-        Function ellipse = new Ellipse();
+        Ellipse ellipse = new Ellipse();
         System.out.println("Обчислення для еліпса:");
         ellipse.printResult(x);
 
-        Function hyperbola = new Hyperbola();
+        Hyperbola hyperbola = new Hyperbola();
         System.out.println("Обчислення для гіперболи:");
         hyperbola.printResult(x);
     }

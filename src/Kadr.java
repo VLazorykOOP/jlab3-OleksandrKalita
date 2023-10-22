@@ -9,7 +9,6 @@ public class Kadr implements IShow {
         this.dateOfBirthday = dateOfBirthday;
     };
 
-    @Override
     public void Show() {
 
     }

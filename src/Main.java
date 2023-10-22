@@ -6,7 +6,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("");
 
-        firstTask();
+        // firstTask();
+        secondTask();
     }
 
     public static void firstTask() {
@@ -34,7 +35,7 @@ public class Main {
                 System.out.print("Enter your education: ");
                 String education = scanner.nextLine();
 
-                Ingeneer person = new Ingeneer(name, date, education);
+                Ingineer person = new Ingineer(name, date, education);
                 kadrs.add(person);
             } else if (symbol == 3) {
                 System.out.print("Enter your name: ");
@@ -56,5 +57,15 @@ public class Main {
             }
         }
     }
-    
+    public static void secondTask() {
+        double x = 1;
+
+        Function ellipse = new Ellipse();
+        System.out.println("Обчислення для еліпса:");
+        ellipse.printResult(x);
+
+        Function hyperbola = new Hyperbola();
+        System.out.println("Обчислення для гіперболи:");
+        hyperbola.printResult(x);
+    }
 }
